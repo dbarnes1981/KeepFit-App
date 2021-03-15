@@ -493,9 +493,9 @@ input {
 }
 
 input, .text {
-  font-size: 0.8rem!important;
+  font-size: 0.9rem!important;
   font-family: 'Nunito',sans-serif!important;
-  color: var(--second-color)!important;
+  color: var(--third-color)!important;
 }
 
  .fa-greater-than {
@@ -529,8 +529,9 @@ input, .text {
   bottom: 0;
 } */
 
-.copyright p {
+.copyright {
   margin-top: 10%;
+  padding: 15px;
   color: var(--second-color);
   text-align: center;
   font-size: 0.8rem;
@@ -553,9 +554,9 @@ input, .text {
     margin-top: 0;
     font-size: 2.4rem;
   }
-  #second_column {
+  /* #second_column {
     display: none;
-  }
+  } */
   #second_section, .row, #text-section {
     display: flex;
     flex-direction: column;
@@ -623,9 +624,11 @@ input, .text {
     display: flex;
     flex-direction: row;
   }
-  .copyright p {
-    position: absolute;
-    bottom: 0;
+  .copyright {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
 }
@@ -633,8 +636,11 @@ input, .text {
 /* Media Query: Meduim Size */
 
 @media (max-width: 765px) {
-  .main {
+  .main  {
     font-size: 2.2rem;
+  }
+  .menu li a {
+    font-size: 1.9rem;
   }
   #second_section .row {
     display: flex;
@@ -661,9 +667,9 @@ input, .text {
     justify-content: center;
     width: 100%;
   }
-   /* .row, #second_column, .col  {
+  #fifth_section #second_column  {
     display: none;
-  } */
+  }
   #fifth_section .row {
     display: flex;
     flex-direction: column;
@@ -685,15 +691,29 @@ input, .text {
   #icon_info, .col-2  {
     display: none;
   }
-  #footer_section {
+  #footer_section .row .col {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    text-align: left;
   }
-  .copyright p {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
+  #footer_section .row h5 {
+    font-size: 1rem;
+    text-align: left;
+  }
+  #footer_section .row p {
+    font-size: 0.6rem;
+    text-align: left;
+  }
+  #footer_section .row .col {
+    width: 100%;
+  }
+}
+
+/*  */
+
+@media (max-width: 570px) {
+  #footer_section .row .col {
+    display: grid;
   }
 }
